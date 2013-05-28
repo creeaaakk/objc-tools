@@ -75,6 +75,11 @@
         return [NSData dataWithBytes:nil length:0];
     }
     
+    if (![input hasBytesAvailable])
+    {
+        return nil;
+    }
+    
     index += [input read:buffer + index maxLength:num - index];
     
     if (index == num)
