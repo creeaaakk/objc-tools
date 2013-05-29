@@ -42,7 +42,7 @@
 // designated
 - (id)initWithInput:(NSInputStream *)inInput num:(NSUInteger)inNum
 {
-    RAISE_IF_NIL(input);
+    RAISE_IF_NIL(inInput);
     
     if (self = [super init])
     {
