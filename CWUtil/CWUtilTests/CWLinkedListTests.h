@@ -25,6 +25,16 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "CWDataReader.h"
-#import "CWLinkedBlockingQueue.h"
+#import <SenTestingKit/SenTestingKit.h>
+
+#import "CWLinkedNode.h"
 #import "CWLinkedList.h"
+
+@interface CWLinkedListTests : SenTestCase
+
+- (void)testAdd;
+- (void)testAddFirst;
+- (void)testRemove;
+- (void)testRemoveLast;
+
+@end

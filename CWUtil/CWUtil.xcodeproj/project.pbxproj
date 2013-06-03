@@ -7,105 +7,171 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D44DABD21754241D00072697 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44DABD11754241D00072697 /* Cocoa.framework */; };
-		D44DABE4175424F500072697 /* CWDataReader.h in Headers */ = {isa = PBXBuildFile; fileRef = D44DABE2175424F500072697 /* CWDataReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D44DABE5175424F500072697 /* CWDataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = D44DABE3175424F500072697 /* CWDataReader.m */; };
-		D44DABE61754262600072697 /* CWUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = D44DABDA1754241D00072697 /* CWUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4403EF81757EF5700F06935 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4403EF71757EF5700F06935 /* Cocoa.framework */; };
+		D4403F0A1757EF5700F06935 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4403F091757EF5700F06935 /* SenTestingKit.framework */; };
+		D4403F0B1757EF5700F06935 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4403EF71757EF5700F06935 /* Cocoa.framework */; };
+		D4403F0E1757EF5700F06935 /* libCWUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4403EF41757EF5700F06935 /* libCWUtil.a */; };
+		D4403F141757EF5700F06935 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4403F121757EF5700F06935 /* InfoPlist.strings */; };
+		D4403F221757F00F00F06935 /* CWLinkedBlockingQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = D4403F201757F00F00F06935 /* CWLinkedBlockingQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4403F231757F00F00F06935 /* CWLinkedBlockingQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D4403F211757F00F00F06935 /* CWLinkedBlockingQueue.m */; };
+		D4403F261757FF5400F06935 /* CWLinkedList.h in Headers */ = {isa = PBXBuildFile; fileRef = D4403F241757FF5400F06935 /* CWLinkedList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4403F271757FF5400F06935 /* CWLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = D4403F251757FF5400F06935 /* CWLinkedList.m */; };
+		D4403F2A1758009200F06935 /* CWLinkedNode.h in Headers */ = {isa = PBXBuildFile; fileRef = D4403F281758009200F06935 /* CWLinkedNode.h */; };
+		D4403F2B1758009200F06935 /* CWLinkedNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D4403F291758009200F06935 /* CWLinkedNode.m */; };
+		D4403F2E1758197A00F06935 /* CWLinkedListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4403F2D1758197A00F06935 /* CWLinkedListTests.m */; };
+		D47C425A17594FE400FDCA65 /* CWDataReader.h in Headers */ = {isa = PBXBuildFile; fileRef = D47C425817594FE400FDCA65 /* CWDataReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D47C425B17594FE400FDCA65 /* CWDataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = D47C425917594FE400FDCA65 /* CWDataReader.m */; };
+		D47C425C1759502F00FDCA65 /* CWUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = D4403F001757EF5700F06935 /* CWUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D4403F0C1757EF5700F06935 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4403EEC1757EF5700F06935 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4403EF31757EF5700F06935;
+			remoteInfo = CWUtil;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		D44DABCE1754241D00072697 /* libCWUtil.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCWUtil.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D44DABD11754241D00072697 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		D44DABD41754241D00072697 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		D44DABD51754241D00072697 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		D44DABD61754241D00072697 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D44DABD91754241D00072697 /* CWUtil-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CWUtil-Prefix.pch"; sourceTree = "<group>"; };
-		D44DABDA1754241D00072697 /* CWUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUtil.h; sourceTree = "<group>"; };
-		D44DABE2175424F500072697 /* CWDataReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWDataReader.h; sourceTree = "<group>"; };
-		D44DABE3175424F500072697 /* CWDataReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWDataReader.m; sourceTree = "<group>"; };
+		D4403EF41757EF5700F06935 /* libCWUtil.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCWUtil.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4403EF71757EF5700F06935 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D4403EFA1757EF5700F06935 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		D4403EFB1757EF5700F06935 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D4403EFC1757EF5700F06935 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D4403EFF1757EF5700F06935 /* CWUtil-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CWUtil-Prefix.pch"; sourceTree = "<group>"; };
+		D4403F001757EF5700F06935 /* CWUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWUtil.h; sourceTree = "<group>"; };
+		D4403F081757EF5700F06935 /* CWUtilTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CWUtilTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4403F091757EF5700F06935 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		D4403F111757EF5700F06935 /* CWUtilTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CWUtilTests-Info.plist"; sourceTree = "<group>"; };
+		D4403F131757EF5700F06935 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D4403F201757F00F00F06935 /* CWLinkedBlockingQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLinkedBlockingQueue.h; sourceTree = "<group>"; };
+		D4403F211757F00F00F06935 /* CWLinkedBlockingQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLinkedBlockingQueue.m; sourceTree = "<group>"; };
+		D4403F241757FF5400F06935 /* CWLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLinkedList.h; sourceTree = "<group>"; };
+		D4403F251757FF5400F06935 /* CWLinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLinkedList.m; sourceTree = "<group>"; };
+		D4403F281758009200F06935 /* CWLinkedNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLinkedNode.h; sourceTree = "<group>"; };
+		D4403F291758009200F06935 /* CWLinkedNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLinkedNode.m; sourceTree = "<group>"; };
+		D4403F2C1758197A00F06935 /* CWLinkedListTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLinkedListTests.h; sourceTree = "<group>"; };
+		D4403F2D1758197A00F06935 /* CWLinkedListTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLinkedListTests.m; sourceTree = "<group>"; };
+		D47C425817594FE400FDCA65 /* CWDataReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWDataReader.h; sourceTree = "<group>"; };
+		D47C425917594FE400FDCA65 /* CWDataReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWDataReader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D44DABCB1754241D00072697 /* Frameworks */ = {
+		D4403EF11757EF5700F06935 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D44DABD21754241D00072697 /* Cocoa.framework in Frameworks */,
+				D4403EF81757EF5700F06935 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4403F041757EF5700F06935 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4403F0A1757EF5700F06935 /* SenTestingKit.framework in Frameworks */,
+				D4403F0B1757EF5700F06935 /* Cocoa.framework in Frameworks */,
+				D4403F0E1757EF5700F06935 /* libCWUtil.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D44DABC51754241D00072697 = {
+		D4403EEB1757EF5700F06935 = {
 			isa = PBXGroup;
 			children = (
-				D44DABD71754241D00072697 /* CWUtil */,
-				D44DABD01754241D00072697 /* Frameworks */,
-				D44DABCF1754241D00072697 /* Products */,
+				D4403EFD1757EF5700F06935 /* CWUtil */,
+				D4403F0F1757EF5700F06935 /* CWUtilTests */,
+				D4403EF61757EF5700F06935 /* Frameworks */,
+				D4403EF51757EF5700F06935 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D44DABCF1754241D00072697 /* Products */ = {
+		D4403EF51757EF5700F06935 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D44DABCE1754241D00072697 /* libCWUtil.a */,
+				D4403EF41757EF5700F06935 /* libCWUtil.a */,
+				D4403F081757EF5700F06935 /* CWUtilTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D44DABD01754241D00072697 /* Frameworks */ = {
+		D4403EF61757EF5700F06935 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D44DABD11754241D00072697 /* Cocoa.framework */,
-				D44DABD31754241D00072697 /* Other Frameworks */,
+				D4403EF71757EF5700F06935 /* Cocoa.framework */,
+				D4403F091757EF5700F06935 /* SenTestingKit.framework */,
+				D4403EF91757EF5700F06935 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D44DABD31754241D00072697 /* Other Frameworks */ = {
+		D4403EF91757EF5700F06935 /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D44DABD41754241D00072697 /* AppKit.framework */,
-				D44DABD51754241D00072697 /* CoreData.framework */,
-				D44DABD61754241D00072697 /* Foundation.framework */,
+				D4403EFA1757EF5700F06935 /* AppKit.framework */,
+				D4403EFB1757EF5700F06935 /* CoreData.framework */,
+				D4403EFC1757EF5700F06935 /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		D44DABD71754241D00072697 /* CWUtil */ = {
+		D4403EFD1757EF5700F06935 /* CWUtil */ = {
 			isa = PBXGroup;
 			children = (
-				D44DABD91754241D00072697 /* CWUtil-Prefix.pch */,
-				D44DABDA1754241D00072697 /* CWUtil.h */,
-				D44DABE2175424F500072697 /* CWDataReader.h */,
-				D44DABE3175424F500072697 /* CWDataReader.m */,
+				D4403EFF1757EF5700F06935 /* CWUtil-Prefix.pch */,
+				D4403F001757EF5700F06935 /* CWUtil.h */,
+				D47C425817594FE400FDCA65 /* CWDataReader.h */,
+				D47C425917594FE400FDCA65 /* CWDataReader.m */,
+				D4403F201757F00F00F06935 /* CWLinkedBlockingQueue.h */,
+				D4403F211757F00F00F06935 /* CWLinkedBlockingQueue.m */,
+				D4403F241757FF5400F06935 /* CWLinkedList.h */,
+				D4403F251757FF5400F06935 /* CWLinkedList.m */,
+				D4403F281758009200F06935 /* CWLinkedNode.h */,
+				D4403F291758009200F06935 /* CWLinkedNode.m */,
 			);
 			path = CWUtil;
+			sourceTree = "<group>";
+		};
+		D4403F0F1757EF5700F06935 /* CWUtilTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4403F111757EF5700F06935 /* CWUtilTests-Info.plist */,
+				D4403F121757EF5700F06935 /* InfoPlist.strings */,
+				D4403F2C1758197A00F06935 /* CWLinkedListTests.h */,
+				D4403F2D1758197A00F06935 /* CWLinkedListTests.m */,
+			);
+			path = CWUtilTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		D44DABCC1754241D00072697 /* Headers */ = {
+		D4403EF21757EF5700F06935 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D44DABE4175424F500072697 /* CWDataReader.h in Headers */,
-				D44DABE61754262600072697 /* CWUtil.h in Headers */,
+				D4403F221757F00F00F06935 /* CWLinkedBlockingQueue.h in Headers */,
+				D4403F261757FF5400F06935 /* CWLinkedList.h in Headers */,
+				D4403F2A1758009200F06935 /* CWLinkedNode.h in Headers */,
+				D47C425A17594FE400FDCA65 /* CWDataReader.h in Headers */,
+				D47C425C1759502F00FDCA65 /* CWUtil.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D44DABCD1754241D00072697 /* CWUtil */ = {
+		D4403EF31757EF5700F06935 /* CWUtil */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D44DABDF1754241D00072697 /* Build configuration list for PBXNativeTarget "CWUtil" */;
+			buildConfigurationList = D4403F1A1757EF5700F06935 /* Build configuration list for PBXNativeTarget "CWUtil" */;
 			buildPhases = (
-				D44DABCA1754241D00072697 /* Sources */,
-				D44DABCB1754241D00072697 /* Frameworks */,
-				D44DABCC1754241D00072697 /* Headers */,
+				D4403EF01757EF5700F06935 /* Sources */,
+				D4403EF11757EF5700F06935 /* Frameworks */,
+				D4403EF21757EF5700F06935 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -113,48 +179,125 @@
 			);
 			name = CWUtil;
 			productName = CWUtil;
-			productReference = D44DABCE1754241D00072697 /* libCWUtil.a */;
+			productReference = D4403EF41757EF5700F06935 /* libCWUtil.a */;
 			productType = "com.apple.product-type.library.static";
+		};
+		D4403F071757EF5700F06935 /* CWUtilTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4403F1D1757EF5700F06935 /* Build configuration list for PBXNativeTarget "CWUtilTests" */;
+			buildPhases = (
+				D4403F031757EF5700F06935 /* Sources */,
+				D4403F041757EF5700F06935 /* Frameworks */,
+				D4403F051757EF5700F06935 /* Resources */,
+				D4403F061757EF5700F06935 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4403F0D1757EF5700F06935 /* PBXTargetDependency */,
+			);
+			name = CWUtilTests;
+			productName = CWUtilTests;
+			productReference = D4403F081757EF5700F06935 /* CWUtilTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D44DABC61754241D00072697 /* Project object */ = {
+		D4403EEC1757EF5700F06935 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Creeaaakk Ware LLC";
 			};
-			buildConfigurationList = D44DABC91754241D00072697 /* Build configuration list for PBXProject "CWUtil" */;
+			buildConfigurationList = D4403EEF1757EF5700F06935 /* Build configuration list for PBXProject "CWUtil" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = D44DABC51754241D00072697;
-			productRefGroup = D44DABCF1754241D00072697 /* Products */;
+			mainGroup = D4403EEB1757EF5700F06935;
+			productRefGroup = D4403EF51757EF5700F06935 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D44DABCD1754241D00072697 /* CWUtil */,
+				D4403EF31757EF5700F06935 /* CWUtil */,
+				D4403F071757EF5700F06935 /* CWUtilTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		D4403F051757EF5700F06935 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4403F141757EF5700F06935 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D4403F061757EF5700F06935 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		D44DABCA1754241D00072697 /* Sources */ = {
+		D4403EF01757EF5700F06935 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D44DABE5175424F500072697 /* CWDataReader.m in Sources */,
+				D4403F231757F00F00F06935 /* CWLinkedBlockingQueue.m in Sources */,
+				D4403F271757FF5400F06935 /* CWLinkedList.m in Sources */,
+				D4403F2B1758009200F06935 /* CWLinkedNode.m in Sources */,
+				D47C425B17594FE400FDCA65 /* CWDataReader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4403F031757EF5700F06935 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4403F2E1758197A00F06935 /* CWLinkedListTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D4403F0D1757EF5700F06935 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4403EF31757EF5700F06935 /* CWUtil */;
+			targetProxy = D4403F0C1757EF5700F06935 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D4403F121757EF5700F06935 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4403F131757EF5700F06935 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		D44DABDD1754241D00072697 /* Debug */ = {
+		D4403F181757EF5700F06935 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -187,7 +330,7 @@
 			};
 			name = Debug;
 		};
-		D44DABDE1754241D00072697 /* Release */ = {
+		D4403F191757EF5700F06935 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -213,7 +356,7 @@
 			};
 			name = Release;
 		};
-		D44DABE01754241D00072697 /* Debug */ = {
+		D4403F1B1757EF5700F06935 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -223,7 +366,7 @@
 			};
 			name = Debug;
 		};
-		D44DABE11754241D00072697 /* Release */ = {
+		D4403F1C1757EF5700F06935 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -233,27 +376,63 @@
 			};
 			name = Release;
 		};
+		D4403F1E1757EF5700F06935 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CWUtil/CWUtil-Prefix.pch";
+				INFOPLIST_FILE = "CWUtilTests/CWUtilTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D4403F1F1757EF5700F06935 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CWUtil/CWUtil-Prefix.pch";
+				INFOPLIST_FILE = "CWUtilTests/CWUtilTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D44DABC91754241D00072697 /* Build configuration list for PBXProject "CWUtil" */ = {
+		D4403EEF1757EF5700F06935 /* Build configuration list for PBXProject "CWUtil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D44DABDD1754241D00072697 /* Debug */,
-				D44DABDE1754241D00072697 /* Release */,
+				D4403F181757EF5700F06935 /* Debug */,
+				D4403F191757EF5700F06935 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D44DABDF1754241D00072697 /* Build configuration list for PBXNativeTarget "CWUtil" */ = {
+		D4403F1A1757EF5700F06935 /* Build configuration list for PBXNativeTarget "CWUtil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D44DABE01754241D00072697 /* Debug */,
-				D44DABE11754241D00072697 /* Release */,
+				D4403F1B1757EF5700F06935 /* Debug */,
+				D4403F1C1757EF5700F06935 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4403F1D1757EF5700F06935 /* Build configuration list for PBXNativeTarget "CWUtilTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4403F1E1757EF5700F06935 /* Debug */,
+				D4403F1F1757EF5700F06935 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D44DABC61754241D00072697 /* Project object */;
+	rootObject = D4403EEC1757EF5700F06935 /* Project object */;
 }

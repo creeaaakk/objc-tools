@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D44DABCD1754241D00072697"
+               BlueprintIdentifier = "D4403EF31757EF5700F06935"
                BuildableName = "libCWUtil.a"
                BlueprintName = "CWUtil"
                ReferencedContainer = "container:CWUtil.xcodeproj">
@@ -28,6 +28,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D4403F071757EF5700F06935"
+               BuildableName = "CWUtilTests.octest"
+               BlueprintName = "CWUtilTests"
+               ReferencedContainer = "container:CWUtil.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

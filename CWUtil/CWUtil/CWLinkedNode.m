@@ -25,6 +25,45 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "CWDataReader.h"
-#import "CWLinkedBlockingQueue.h"
-#import "CWLinkedList.h"
+#import "CWLinkedNode.h"
+
+@implementation CWLinkedNode
+
+@synthesize prev;
+@synthesize next;
+@synthesize data;
+
++ (id)node
+{
+    return [[self alloc] init];
+}
+
++ (id)nodeWithData:(id)data
+{
+    return [[self alloc] initWithData:data];
+}
+
+// designated
+- (id)init
+{
+    if (self = [super init])
+    {
+        prev = nil;
+        next = nil;
+        data = nil;
+    }
+    
+    return self;
+}
+
+- (id)initWithData:(id)inData
+{
+    if (self = [self init])
+    {
+        data = inData;
+    }
+    
+    return self;
+}
+
+@end

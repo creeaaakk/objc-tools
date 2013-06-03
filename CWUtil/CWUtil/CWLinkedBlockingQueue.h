@@ -25,6 +25,25 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "CWDataReader.h"
-#import "CWLinkedBlockingQueue.h"
+#import <Foundation/Foundation.h>
+
 #import "CWLinkedList.h"
+
+@interface CWLinkedBlockingQueue : NSObject
+{
+@private
+    CWLinkedList *list;
+    NSConditionLock *isEmptyLock;
+}
+
++ (id)queue;
+
+// designated
+- (id)init;
+
+- (BOOL)add:(id)item;
+- (BOOL)add:(id)item wait:(NSTimeInterval)seconds;
+- (id)remove;
+- (id)removeWithWait:(NSTimeInterval)seconds;
+
+@end

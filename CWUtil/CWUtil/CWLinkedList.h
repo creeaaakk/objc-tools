@@ -25,6 +25,29 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "CWDataReader.h"
-#import "CWLinkedBlockingQueue.h"
-#import "CWLinkedList.h"
+#import <Foundation/Foundation.h>
+
+#import "CWLinkedNode.h"
+
+@interface CWLinkedList : NSObject
+{
+@private
+    NSUInteger size;
+    CWLinkedNode *head;
+    __weak CWLinkedNode *tail;
+}
+
++ (id)list;
+
+// designated
+- (id)init;
+
+- (BOOL)add:(id)item;
+- (BOOL)addFirst:(id)item;
+- (id)remove;
+- (id)removeLast;
+- (NSUInteger)size;
+- (BOOL)isEmpty;
+- (BOOL)isFull;
+
+@end

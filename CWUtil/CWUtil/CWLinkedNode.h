@@ -25,6 +25,20 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "CWDataReader.h"
-#import "CWLinkedBlockingQueue.h"
-#import "CWLinkedList.h"
+#import <Foundation/Foundation.h>
+
+@interface CWLinkedNode : NSObject
+
+@property (weak) CWLinkedNode *prev;
+@property (strong) CWLinkedNode *next;
+@property (strong) id data;
+
++ (id)node;
++ (id)nodeWithData:(id)data;
+
+// designated
+- (id)init;
+
+- (id)initWithData:(id)data;
+
+@end

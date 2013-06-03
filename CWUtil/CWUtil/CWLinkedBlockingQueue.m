@@ -25,6 +25,67 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "CWDataReader.h"
 #import "CWLinkedBlockingQueue.h"
-#import "CWLinkedList.h"
+
+@implementation CWLinkedBlockingQueue
+
++ (id)queue
+{
+    return [[self alloc] init];
+}
+
+// designated
+- (id)init
+{
+    if (self = [super init])
+    {
+        list = [CWLinkedList list];
+        isEmptyLock = [NSConditionLock new];
+    }
+    
+    return self;
+}
+
+- (BOOL)add:(id)item
+{
+    [isEmptyLock lock];
+    BOOL ret = [list add:item];
+    [isEmptyLock unlockWithCondition:NO];
+    return ret;
+}
+
+- (BOOL)add:(id)item wait:(NSTimeInterval)seconds
+{
+    BOOL ret = NO;
+    
+    if ([isEmptyLock lockBeforeDate:[NSDate dateWithTimeIntervalSinceNow:seconds]])
+    {
+        ret = [list add:item];
+        [isEmptyLock unlockWithCondition:NO];
+    }
+    
+    return ret;
+}
+
+- (id)remove
+{
+    [isEmptyLock lockWhenCondition:NO];
+    id ret = [list remove];
+    [isEmptyLock unlockWithCondition:[list isEmpty]];
+    return ret;
+}
+
+- (id)removeWithWait:(NSTimeInterval)seconds
+{
+    id ret = nil;
+    
+    if ([isEmptyLock lockWhenCondition:NO beforeDate:[NSDate dateWithTimeIntervalSinceNow:seconds]])
+    {
+        ret = [list remove];
+        [isEmptyLock unlockWithCondition:[list isEmpty]];
+    }
+    
+    return ret;
+}
+
+@end
