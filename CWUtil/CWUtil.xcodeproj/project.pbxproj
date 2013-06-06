@@ -16,7 +16,7 @@
 		D4403F231757F00F00F06935 /* CWLinkedBlockingQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = D4403F211757F00F00F06935 /* CWLinkedBlockingQueue.m */; };
 		D4403F261757FF5400F06935 /* CWLinkedList.h in Headers */ = {isa = PBXBuildFile; fileRef = D4403F241757FF5400F06935 /* CWLinkedList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4403F271757FF5400F06935 /* CWLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = D4403F251757FF5400F06935 /* CWLinkedList.m */; };
-		D4403F2A1758009200F06935 /* CWLinkedNode.h in Headers */ = {isa = PBXBuildFile; fileRef = D4403F281758009200F06935 /* CWLinkedNode.h */; };
+		D4403F2A1758009200F06935 /* CWLinkedNode.h in Headers */ = {isa = PBXBuildFile; fileRef = D4403F281758009200F06935 /* CWLinkedNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4403F2B1758009200F06935 /* CWLinkedNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D4403F291758009200F06935 /* CWLinkedNode.m */; };
 		D4403F2E1758197A00F06935 /* CWLinkedListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4403F2D1758197A00F06935 /* CWLinkedListTests.m */; };
 		D47C425A17594FE400FDCA65 /* CWDataReader.h in Headers */ = {isa = PBXBuildFile; fileRef = D47C425817594FE400FDCA65 /* CWDataReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
