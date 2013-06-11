@@ -68,7 +68,7 @@
     FREE_IF_NOT_NULL(buffer);
 }
 
-- (NSData *)read
+- (NSData *)readWithError:(NSError **)error
 {
     if (num == 0)
     {
@@ -80,21 +80,28 @@
         return nil;
     }
     
-    index += [input read:buffer + index maxLength:num - index];
+    NSInteger read = [input read:buffer + index maxLength:num - index];
     
-    if (index == num)
+    if (read < 0)
     {
-        index = 0;
-        return [NSData dataWithBytes:buffer length:num];
-    }
-    else if (index > num)
-    {
-        @throw [NSException exceptionWithName:@"fatal error" reason:@"CWDataReader read past the buffer size" userInfo:nil];
+        *error = [NSError errorWithDomain:@"CWDataReader" code:0 userInfo:nil];
     }
     else
     {
-        return nil;
+        index += read;
+        
+        if (index == num)
+        {
+            index = 0;
+            return [NSData dataWithBytes:buffer length:num];
+        }
+        else if (index > num)
+        {
+            @throw [NSException exceptionWithName:@"fatal error" reason:@"CWDataReader read past the buffer size" userInfo:nil];
+        }
     }
+    
+    return nil;
 }
 
 @end

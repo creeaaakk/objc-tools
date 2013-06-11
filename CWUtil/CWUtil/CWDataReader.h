@@ -41,6 +41,6 @@
 // designated
 - (id)initWithInput:(NSInputStream *)input num:(NSUInteger)num;
 
-- (NSData *)read;
+- (NSData *)readWithError:(NSError **)error;
 
 @end

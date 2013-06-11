@@ -25,8 +25,80 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "CWDataReader.h"
 #import "CWDataWriter.h"
-#import "CWLinkedBlockingQueue.h"
-#import "CWLinkedList.h"
-#import "CWLinkedNode.h"
+
+@implementation CWDataWriter
+
++ (id)writerWithOutput:(NSOutputStream *)output data:(NSData *)data
+{
+    return [[self alloc] initWithOutput:output data:data];
+}
+
+- (id)init
+{
+    NO_IMPLEMENTATION;
+}
+
+// designated
+- (id)initWithOutput:(NSOutputStream *)inOutput
+{
+    RAISE_IF_NIL(inOutput);
+    
+    if (self = [super init])
+    {
+        output = inOutput;
+        index = 0;
+    }
+    
+    return self;
+}
+
+- (id)initWithOutput:(NSOutputStream *)inOutput data:(NSData *)inData
+{
+    if (self = [self initWithOutput:inOutput])
+    {
+        [self setData:inData];
+    }
+    
+    return self;
+}
+
+- (void) setData:(NSData *)inData
+{
+    data = inData;
+    index = 0;
+}
+
+- (BOOL)writeWithError:(NSError **)error
+{
+    NSUInteger length = data.length;
+    
+    if (length == index)
+    {
+        return YES;
+    }
+    
+    NSInteger written = [output write:((const uint8_t *) data.bytes) + index maxLength:length - index];
+    
+    if (written == -1)
+    {
+        *error = [NSError errorWithDomain:@"WCDataWriter" code:0 userInfo:nil];
+    }
+    else
+    {
+        index += written;
+        
+        if (length == index)
+        {
+            return YES;
+        }
+        else if (length < index)
+        {
+            @throw [NSException exceptionWithName:@"fatal error" reason:@"CWDataWrite wrote past the buffer size" userInfo:nil];
+        }
+    }
+    
+    return NO;
+}
+
+@end

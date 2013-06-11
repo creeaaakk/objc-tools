@@ -25,8 +25,24 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "CWDataReader.h"
-#import "CWDataWriter.h"
-#import "CWLinkedBlockingQueue.h"
-#import "CWLinkedList.h"
-#import "CWLinkedNode.h"
+#import <Foundation/Foundation.h>
+
+@interface CWDataWriter : NSObject
+{
+@private
+    NSOutputStream *output;
+    NSData *data;
+    NSUInteger index;
+}
+
++ (id)writerWithOutput:(NSOutputStream *)output data:(NSData *)data;
+
+// designated
+- (id)initWithOutput:(NSOutputStream *)output;
+
+- (id)initWithOutput:(NSOutputStream *)output data:(NSData *)data;
+
+- (void)setData:(NSData *)data;
+- (BOOL)writeWithError:(NSError **)error;
+
+@end

@@ -22,6 +22,8 @@
 		D47C425A17594FE400FDCA65 /* CWDataReader.h in Headers */ = {isa = PBXBuildFile; fileRef = D47C425817594FE400FDCA65 /* CWDataReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D47C425B17594FE400FDCA65 /* CWDataReader.m in Sources */ = {isa = PBXBuildFile; fileRef = D47C425917594FE400FDCA65 /* CWDataReader.m */; };
 		D47C425C1759502F00FDCA65 /* CWUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = D4403F001757EF5700F06935 /* CWUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4AEA58E1766761300ED2ECB /* CWDataWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = D4AEA58C1766761300ED2ECB /* CWDataWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4AEA58F1766761300ED2ECB /* CWDataWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AEA58D1766761300ED2ECB /* CWDataWriter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		D4403F2D1758197A00F06935 /* CWLinkedListTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLinkedListTests.m; sourceTree = "<group>"; };
 		D47C425817594FE400FDCA65 /* CWDataReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWDataReader.h; sourceTree = "<group>"; };
 		D47C425917594FE400FDCA65 /* CWDataReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWDataReader.m; sourceTree = "<group>"; };
+		D4AEA58C1766761300ED2ECB /* CWDataWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWDataWriter.h; sourceTree = "<group>"; };
+		D4AEA58D1766761300ED2ECB /* CWDataWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWDataWriter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 				D4403F001757EF5700F06935 /* CWUtil.h */,
 				D47C425817594FE400FDCA65 /* CWDataReader.h */,
 				D47C425917594FE400FDCA65 /* CWDataReader.m */,
+				D4AEA58C1766761300ED2ECB /* CWDataWriter.h */,
+				D4AEA58D1766761300ED2ECB /* CWDataWriter.m */,
 				D4403F201757F00F00F06935 /* CWLinkedBlockingQueue.h */,
 				D4403F211757F00F00F06935 /* CWLinkedBlockingQueue.m */,
 				D4403F241757FF5400F06935 /* CWLinkedList.h */,
@@ -159,6 +165,7 @@
 				D4403F2A1758009200F06935 /* CWLinkedNode.h in Headers */,
 				D47C425A17594FE400FDCA65 /* CWDataReader.h in Headers */,
 				D47C425C1759502F00FDCA65 /* CWUtil.h in Headers */,
+				D4AEA58E1766761300ED2ECB /* CWDataWriter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +271,7 @@
 				D4403F271757FF5400F06935 /* CWLinkedList.m in Sources */,
 				D4403F2B1758009200F06935 /* CWLinkedNode.m in Sources */,
 				D47C425B17594FE400FDCA65 /* CWDataReader.m in Sources */,
+				D4AEA58F1766761300ED2ECB /* CWDataWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
